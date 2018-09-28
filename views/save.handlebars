@@ -1,0 +1,31 @@
+<main>
+<div id="container">
+    {{#each articles}}
+
+    <div class="row">
+        <div class="col-4 center lines">
+            {{!-- in the saved area the link to article is there along with coment and delete functions --}}
+            <p><h4><a href="https://www.technewsworld.com/"+{{this.url}}>{{this.title}}</a></h4></p>
+            <form action="/delete/{{this.id}}" method="get">
+            {{!-- delete button --}}
+                <button class="delete" data-id={{this.id}}>
+                    Delete
+                </button>
+            </form>
+            <br>
+            {{!-- adding note/comments area --}}
+            <form action="/addNote/{{this.id}}" method="post">
+                <textarea rows="4" cols="50" name="body"></textarea>
+                <br>
+                <button class="submit" data-id={{this.id}}>Submit</button>
+            </form>
+            <div id="noteArea" class="jumbotron jumbotron-fluid">
+                <h4 id="head1">Comments Section</h4>
+                {{!-- this is where the notes are located, tried to do model but challenge to place it on the model --}}
+                <h3 id="head1">{{this.note}}</h3>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+</main>
