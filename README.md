@@ -1,7 +1,7 @@
 # Tech-News-Scraper
 This program allows the user to scrape articles from a website. Which, in this using https://www.technewsworld.com/, tech news is the main topic for this project. So if you what to know the latest tech news just scrape it with this program. 
 
-[Tech News Scraper]()
+[Tech News Scraper](https://sports-news.herokuapp.com/)
 
 [Portfolio](https://mawais54013.github.io/New-Portfolio/)
 
